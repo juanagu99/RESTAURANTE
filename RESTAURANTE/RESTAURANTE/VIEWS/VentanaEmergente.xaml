@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RESTAURANTE.VIEWS.VentanaEmergente"
+     xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+    BackgroundColor="Transparent"
+    >
+
+    <StackLayout
+        Margin="10"
+        Padding="20"
+        Spacing="30"
+        BackgroundColor="#a31915"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        >
+        <Entry x:Name="editcap" Placeholder="{tdr:Translate cantidad}" PlaceholderColor="Black" Keyboard="Numeric"  TextColor="Black" ></Entry>
+        <Button Clicked="Editarbtn" HorizontalOptions="Center" Text="{tdr:Translate btn_editar}" BorderRadius="20" TextColor="#69140F" FontSize="15" BackgroundColor="#DAA520" ></Button>    
+    </StackLayout>
+    
+</pages:PopupPage>

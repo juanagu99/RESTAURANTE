@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="confirmar_pedido_pregunta" xml:space="preserve">
+    <value>Quer confirmar o pedido?</value>
+  </data>
+  <data name="informacion" xml:space="preserve">
+    <value>Informação</value>
+  </data>
+  <data name="llamar_mesero_menu" xml:space="preserve">
+    <value>Ligue para o garçom!</value>
+  </data>
+  <data name="mensaje_carrito" xml:space="preserve">
+    <value>Você ainda não tem produtos no carrinho!</value>
+  </data>
+  <data name="menu_menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="mesero_asignado" xml:space="preserve">
+    <value>Garçom atribuído!</value>
+  </data>
+  <data name="mi_carrito_menu" xml:space="preserve">
+    <value>Meu carrinho</value>
+  </data>
+  <data name="no_escogido_productos" xml:space="preserve">
+    <value>Você ainda não escolheu nenhum produto!</value>
+  </data>
+  <data name="numero_mesa" xml:space="preserve">
+    <value>Número da tabela!</value>
+  </data>
+  <data name="pagar_menu" xml:space="preserve">
+    <value>Check-out </value>
+  </data>
+  <data name="pedido_confirmado" xml:space="preserve">
+    <value>O pedido já foi confirmado!</value>
+  </data>
+  <data name="pedido_confirmado1" xml:space="preserve">
+    <value>O pedido já foi confirmado, por isso não pode ser excluído!</value>
+  </data>
+  <data name="pedido_confirmado2" xml:space="preserve">
+    <value>A encomenda já foi confirmada, pelo que não pode ser editada!</value>
+  </data>
+  <data name="pedido_enviado" xml:space="preserve">
+    <value>O pedido foi enviado para a cozinha!</value>
+  </data>
+  <data name="pedido_vacio" xml:space="preserve">
+    <value>O pedido ainda não foi confirmado!</value>
+  </data>
+  <data name="problemas_conexion" xml:space="preserve">
+    <value>Problemas com a conexão!</value>
+  </data>
+  <data name="publicaciones" xml:space="preserve">
+    <value>Publicações</value>
+  </data>
+  <data name="publicar_btn" xml:space="preserve">
+    <value>&amp;Publicar...</value>
+  </data>
+  <data name="vuelva_intentar" xml:space="preserve">
+    <value>Com licença, tente novamente!</value>
+  </data>
+  <data name="btn_editar" xml:space="preserve">
+    <value>&lt;Editar...&gt;</value>
+  </data>
+  <data name="cantidad" xml:space="preserve">
+    <value>QUANTIDADE</value>
+  </data>
+  <data name="producto" xml:space="preserve">
+    <value>O produto.</value>
+  </data>
+  <data name="mesero_viene" xml:space="preserve">
+    <value>O garçom virá em poucos minutos!</value>
+  </data>
+  <data name="efectivo" xml:space="preserve">
+    <value>Em Dinheiro</value>
+  </data>
+  <data name="tarjeta" xml:space="preserve">
+    <value>Cartão</value>
+  </data>
+  <data name="mesero_datafono" xml:space="preserve">
+    <value>O garçom virá em poucos minutos e vai trazer o Dataphone!</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>Total*</value>
+  </data>
+  <data name="categoria" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="click" xml:space="preserve">
+    <value>Clique para adicionar ao carrinho!</value>
+  </data>
+  <data name="precio" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="producto_escogido" xml:space="preserve">
+    <value>O produto já está adicionado no carrinho de compras!</value>
+  </data>
+  <data name="agregado" xml:space="preserve">
+    <value>Agregado</value>
+  </data>
+  <data name="mensaje_agregado" xml:space="preserve">
+    <value>Foi adicionado!</value>
+  </data>
+  <data name="camara_mensaje" xml:space="preserve">
+    <value>A câmera não foi encontrada!</value>
+  </data>
+  <data name="contraseña" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="usuario" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="btn_ingresar" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="contraseña_invalida" xml:space="preserve">
+    <value>Digite uma senha válida!</value>
+  </data>
+  <data name="usuario_invalido" xml:space="preserve">
+    <value>* Por favor digite um usuário válido.</value>
+  </data>
+</root>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RESTAURANTE.VIEWS.ProductosPage"
+             xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+             >
+    <Grid BackgroundColor="#a31915" >
+
+        <Grid Padding="20,0" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"  BackgroundColor="#69140F" Padding="20" >
+                <StackLayout Orientation="Vertical" >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate numero_mesa }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label Text=" 1" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  >
+                        <Label Text="{tdr:Translate mesero_asignado }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label x:Name="nmesero" Text="Alejandro" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1" >
+            <ListView  x:Name="Listproductos" BackgroundColor="#69140F" HasUnevenRows="true" ItemSelected="producto_Selected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid Padding="20" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="200"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{tdr:Translate click}"  FontSize="10" HorizontalOptions="Center" TextColor="Green" />
+                                    <Label Grid.Row="1" Text="{Binding NombreProducto}" Font="Bold, Italic"  FontSize="20"  HorizontalOptions="Center" TextColor="#DAA520"  />
+                                    <StackLayout  Grid.Row="2" Orientation="Horizontal">
+                                        <Label Text="{tdr:Translate categoria} " TextColor="#DAA520" FontSize="10" />
+                                        <Label Text="{Binding NombreCategoria}" TextColor="white" FontSize="10" />
+                                    </StackLayout>
+                                    <Image Grid.Row="3" Aspect="AspectFill" Source="{Binding Foto}"/>
+                                    <StackLayout Grid.Row="4" Orientation="Vertical">
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="{Binding Descripcion}" FontSize="10"  TextColor="White"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{tdr:Translate precio}" TextColor="White" FontSize="10" />
+                                            <Label Text="{Binding Precio}" TextColor="Green" FontSize="10" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>

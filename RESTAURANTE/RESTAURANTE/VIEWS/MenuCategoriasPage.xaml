@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RESTAURANTE.VIEWS.MenuCategoriasPage"
+             xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+             >
+    <Grid BackgroundColor="#a31915" >
+        <Grid Padding="20,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"  BackgroundColor="#69140F" Padding="20" >
+                <StackLayout Orientation="Vertical" >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate numero_mesa }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label Text=" 1" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  >
+                        <Label Text="{tdr:Translate mesero_asignado }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label x:Name="nmesero" Text="Alejandro" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1" >
+                <ListView  x:Name="ListCategorias" BackgroundColor="#69140F" HasUnevenRows="true" ItemSelected="Item_select" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="20" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  />
+                                        <RowDefinition Height="200"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Text="{Binding NombreCategoria}" HorizontalOptions="Center" Font="Bold, Italic" FontSize="20" TextColor="#DAA520"  />
+
+                                    <Image Grid.Row="1" Aspect="AspectFill" Source="{Binding Foto}"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

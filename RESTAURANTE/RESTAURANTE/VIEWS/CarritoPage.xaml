@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RESTAURANTE.VIEWS.CarritoPage"
+             xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Actualizar" Icon="refrescar.png" Priority="0" Clicked="btnrecargar" />
+        <ToolbarItem Text="Confirmar pedido" Priority="1"  Icon="confirmar.png" Clicked="btnpedir" />
+    </ContentPage.ToolbarItems>
+    
+    <Grid BackgroundColor="#a31915" >
+        
+        <Grid Padding="20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0"  BackgroundColor="#69140F" Padding="20" >
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate numero_mesa }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label Text=" 1" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  >
+                        <Label Text="{tdr:Translate mesero_asignado }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label x:Name="nmesero" Text="Alejandro" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                
+                <Label HorizontalOptions="Center" VerticalOptions="Center" x:Name="carritovacio" IsVisible="True" Margin="0,100" Font="Bold, Italic" TextColor="#DAA520" Text="{tdr:Translate mensaje_carrito}" />
+
+                <ListView  x:Name="Listproductos" BackgroundColor="#69140F" SelectionMode="None" HasUnevenRows="true" IsVisible="False" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid Padding="10" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Grid  Grid.Row="0" >
+                                            <Button HorizontalOptions="End" BackgroundColor="#69140F" Clicked="btnquitar" WidthRequest="50" HeightRequest="50">
+                                                <Button.Image >
+                                                    <OnPlatform  x:TypeArguments="FileImageSource" Android="quitar.png" >
+                                                    </OnPlatform>
+                                                </Button.Image>
+                                            </Button>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Producto: " TextColor="#DAA520" FontSize="15" />
+                                                <Label Text="{Binding  NombreProducto}" TextColor="white" FontSize="15" />
+                                            </StackLayout>
+                                        </Grid>
+                                        <Grid Grid.Row="1" >
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{ tdr:Translate cantidad }" TextColor="#DAA520" FontSize="15" />
+                                                <Label Text="{Binding  Cantidad}" TextColor="white" FontSize="15"></Label>
+                                            </StackLayout>
+                                            <Button HorizontalOptions="End" Clicked="btneditar" Text="{tdr:Translate btn_editar}" BorderRadius="20" TextColor="#69140F" FontSize="15" BackgroundColor="#DAA520"></Button>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

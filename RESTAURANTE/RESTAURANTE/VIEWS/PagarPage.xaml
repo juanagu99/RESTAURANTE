@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RESTAURANTE.VIEWS.PagarPage" 
+             xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+             >
+    
+    <Grid BackgroundColor="#a31915" >
+
+        <Grid Padding="20,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"  BackgroundColor="#69140F" Padding="20" >
+                <StackLayout Orientation="Vertical" >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{tdr:Translate numero_mesa }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label Text=" 1" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  >
+                        <Label Text="{tdr:Translate mesero_asignado }" Font="Bold, Italic" TextColor="#DAA520" />
+                        <Label x:Name="nmesero" Text="Alejandro" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="20">
+                <StackLayout Orientation="Vertical">
+                    <Button BorderRadius="100" HorizontalOptions="Center" BackgroundColor="#69140F" Clicked="btnefectivo" WidthRequest="100" HeightRequest="100">
+                        <Button.Image >
+                        <OnPlatform  x:TypeArguments="FileImageSource" Android="efectivo.png" >
+                        </OnPlatform>
+                    </Button.Image>
+                </Button>
+                    <Label HorizontalOptions="Center" Text="{tdr:Translate efectivo}" TextColor="#DAA520" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical" >
+                    <Button BorderRadius="100" HorizontalOptions="Center" BackgroundColor="#69140F" Clicked="btntarjeta" WidthRequest="100" HeightRequest="100">
+                        <Button.Image >
+                        <OnPlatform  x:TypeArguments="FileImageSource" Android="tarjeta.png" >
+                        </OnPlatform>
+                        </Button.Image>
+                     </Button>
+                     <Label HorizontalOptions="Center" Text="{tdr:Translate tarjeta}" TextColor="#DAA520" />
+                </StackLayout>
+            </StackLayout>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

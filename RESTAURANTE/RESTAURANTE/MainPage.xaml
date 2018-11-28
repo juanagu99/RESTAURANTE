@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RESTAURANTE"
+             x:Class="RESTAURANTE.MainPage"
+            xmlns:views="clr-namespace:RESTAURANTE.VIEWS"
+             xmlns:tdr="clr-namespace:RESTAURANTE.Helpers"
+            >
+
+    <views:LlamarPage Title="{tdr:Translate llamar_mesero_menu}" Icon="llamar.png"/>
+    <views:PagarPage Title="{tdr:Translate pagar_menu}" Icon="mano.png"/>
+    <views:MenuCategoriasPage Title="{tdr:Translate menu_menu}" Icon="menu.png" />
+    <views:CarritoPage Title="{tdr:Translate mi_carrito_menu}" Icon="carro.png"/>
+    <views:PublicacionesPage Title="{tdr:Translate publicaciones}" Icon="selfie.png"/>
+
+
+</TabbedPage>
